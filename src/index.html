@@ -6,9 +6,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+
+    <div>
+      <h1>Caesar Cipher</h1>
+      <div>
+        <label for="message">Mensaje:</label>
+        <input type="text" name="message" id="message" />
+
+        <label for="offset">Llave:</label>
+        <input type="number" name="offset" id="offset" />
+
+        <button id="encrypt">Encriptar</button>
+        <button id="decrypt">Desencriptar</button>
+      </div>
+
+      <div id="result">(Resultado)</div>
     </div>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
