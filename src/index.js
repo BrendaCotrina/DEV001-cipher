@@ -6,15 +6,15 @@ const decryptButton = document.getElementById('decrypt');
 encryptButton.addEventListener('click', function () {
     let offset = document.getElementById('offset').value;
     let message = document.getElementById('message').value;
-    const encoded = cipher.encode(offset, message)
-    document.getElementById('result').innerHTML = encoded;
+    let result = cipher.encode(offset, message)
+    document.getElementById('result').innerHTML = result;
 });
 
 decryptButton.addEventListener('click', function () {
     let offset = document.getElementById('offset').value;
     let message = document.getElementById('message').value;
-    const decoded = cipher.decode(offset, message)
-    document.getElementById('result').innerHTML = decoded;
+    let result = cipher.decode(offset, message)
+    document.getElementById('result').innerHTML = result;
 });
 
 console.log(cipher);

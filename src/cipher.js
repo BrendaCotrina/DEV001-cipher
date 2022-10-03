@@ -1,7 +1,7 @@
 const cipher = {
   encode: function (offset, message) {
-    // (X + N) MOD 27
-    // ([posicion] + [offset]) MOD [letras totales]
+    // (X + N) MOD 26
+    // ([posicion] + [offset]) Residuo [letras totales]
     // (7 + 3) % 26
 
     // KROD <-- 
@@ -15,7 +15,7 @@ const cipher = {
       let letterPosition = (letter.charCodeAt() - abcAsciiStart);
       let newPosition = (letterPosition + offset) % 26;
       let letterEncrypted = String.fromCharCode(newPosition + abcAsciiStart);
-      result += letterEncrypted;
+      result = result + letterEncrypted;
     }
 
     return result
@@ -31,7 +31,7 @@ const cipher = {
       let letterEncrypted = String.fromCharCode(newPosition + abcAsciiStart);
       
       // alert(`letterPosition: ${letterPosition}\nnewPosition: ${newPosition}\nletterEncrypted: ${letterEncrypted}`);
-      result += letterEncrypted;
+      result = result + letterEncrypted;
     }
 
     return result
